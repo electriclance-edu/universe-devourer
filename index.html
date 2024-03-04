@@ -4,27 +4,31 @@
         <link rel="stylesheet" href="index.css">
         <script src="index.js"></script>
     </head>
-    <body>
-        <div class="Content">
-            <div class="CenterBottomOverlay">
-                <p>Log</p>
-                <p>Log</p>
-                <p>Log</p>
-            </div>
+    <body onload="onload()">
+        <div class="SectionParent">
             <div class="Section LeftSection">
+                <div class="SectionHeaderParent">
+                    <p class="SectionHeader">EYE</p>
+                    <div class="SectionHeaderParent-fill" id="progress-fill-search" style="--fill:0">
+                        <p class="SectionHeader-ActionName">SEARCHING...</p>
+                        <div class="SectionHeader-Gradient"></div>
+                    </div>
+                    <p class="SectionHeader-ActionCount" id="progress-count-search"></p>
+                </div>
                 <div class="Eye">
-                    <p class="SectionHeader header">THE EYE</p>
-                    <div class="EyeClicker clickable CentralClickable">
+                    <div class="EyeClicker clickable CentralClickable" onclick="progress('search',5,1.1)">
                         <p class="CentralClickable-Action">SEARCH</p>
                         <p class="CentralClickable-Lore">PEER THROUGH INFINITY, HUNT FOR PREY</p>
                     </div>
-                    <div class="Games">
-                        <div class="game">
+                    <p class="SubsectionHeader">REALMS</p>
+                    <p class="SubsectionDesc">That which you may plunder.</p>
+                    <div class="Subsection">
+                        <div class="game clickable">
                             <div class="game-metaInfo">
                                 <p class="game-title">COOKIE TAPPER</p>
-                                <p class="game-value">13 resource</p>
+                                <p class="game-value">13 cookies</p>
                             </div>
-                            <div class="game-content clickable">
+                            <div class="game-content">
                                 <div class="f-row f-eqChildren">
                                     <div class="f-centerer">
                                         <div class="game-clicker"></div>
@@ -38,12 +42,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="game">
+                        <div class="game clickable">
                             <div class="game-metaInfo">
                                 <p class="game-title">LIME SELLER</p>
-                                <p class="game-value">28.5 resource</p>
+                                <p class="game-value">28.5 limes</p>
                             </div>
-                            <div class="game-content clickable">
+                            <div class="game-content">
                                 <div class="f-row f-eqChildren">
                                     <div class="f-centerer">
                                         <div class="game-clicker"></div>
@@ -59,15 +63,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="EyeResources">
+
+                </div>
             </div>
             <div class="Section CenterSection">
+                <div class="SectionHeaderParent">
+                    <p class="SectionHeader">HAND</p>
+                    <div class="SectionHeaderParent-fill" id="progress-fill-unmake" style="--fill:0">
+                        <p class="SectionHeader-ActionName">UNMAKING...</p>
+                        <div class="SectionHeader-Gradient"></div>
+                    </div>
+                    <p class="SectionHeader-ActionCount" id="progress-count-unmake"></p>
+                </div>
                 <div class="Hand">
-                    <p class="SectionHeader">THE HAND</p>
-                    <div class="HandClicker clickable CentralClickable">
-                        <p class="CentralClickable-Action">DIGEST</p>
+                    <div class="HandClicker clickable CentralClickable" onclick="progress('unmake',5)">
+                        <p class="CentralClickable-Action">UNMAKE</p>
                         <p class="CentralClickable-Lore">PURIFY CORRUPT ITEMS INTO BASE RESOURCE</p>
                     </div>
-                    <div class="RawResources">
+                    <p class="SubsectionHeader">RAW RESOURCES</p>
+                    <p class="SubsectionDesc">Resources to be converted into base resource.</p>
+                    <div class="Subsection RawResources">
                         <div class="smallResource">
                             <p class="smallResource-count">130</p>
                             <p class="smallResource-title">cookies</p>
@@ -82,11 +98,27 @@
                 </div>
             </div>
             <div class="Section RightSection">
+                <div class="SectionHeaderParent">
+                    <p class="SectionHeader">MIND</p>
+                    <div class="SectionHeaderParent-fill" id="progress-fill-ponder" style="--fill:0">
+                        <p class="SectionHeader-ActionName">PONDERING...</p>
+                        <div class="SectionHeader-Gradient"></div>
+                    </div>
+                    <p class="SectionHeader-ActionCount" id="progress-count-ponder"></p>
+                </div>
                 <div class="Mind">
-                    <p class="SectionHeader">THE MIND</p>
-                    <div class="MindClicker clickable CentralClickable">
+                    <div class="MindClicker clickable CentralClickable" onclick="progress('ponder',5)">
                         <p class="CentralClickable-Action">PONDER</p>
-                        <p class="CentralClickable-Lore">YOUR FORM EVER EXPANDS</p>
+                        <p class="CentralClickable-Lore">DEVELOP YOURSELF WITH RESOURCES</p>
+                    </div>
+                    <p class="SubsectionHeader">UPGRADES</p>
+                    <p class="SubsectionDesc">improvements made from the Resource you have gathered.</p>
+                    <div class="Subsection Upgrades">
+                        <div class="upgrade clickable">
+                            <p class="upgrade-title">GREATER SEARCH</p>
+                            <p class="upgrade-cost">12 resource</p>
+                            <p class="upgrade-lore">1 resources/cookie</p>
+                        </div>
                     </div>
                 </div>
             </div>
